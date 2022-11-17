@@ -79,3 +79,7 @@ p {
 .icon>a>img:hover {
     opacity: 0.6;
 }
+
+a {
+    text-decoration: none;
+}
