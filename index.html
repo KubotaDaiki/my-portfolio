@@ -4,11 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
+    <title>Kubota Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Noto+Sans+JP:wght@300&display=swap" rel="stylesheet">
-    <title>Kubota Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Noto+Sans+JP:wght@300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.21/jquery.scrollify.min.js"
+        integrity="sha512-UyX8JsMsNRW1cYl8BoxpcamonpwU2y7mSTsN0Z52plp7oKo1u92Xqfpv6lOlTyH3yiMXK+gU1jw0DVCsPTfKew=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(function () {
+            $.scrollify({
+                section: ".box",
+                scrollSpeed: 600,
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -16,7 +30,7 @@
         <h1>KubotaDaiki's<br>Portfolio</h1>
     </div>
     <main>
-        <article>
+        <article class="box">
             <div>
                 <h2>プロフィール</h2>
                 <p>
@@ -27,7 +41,7 @@
                 </p>
             </div>
         </article>
-        <article>
+        <article class="box">
             <div>
                 <h2>保有資格</h2>
                 <p>基本情報技術者</p>
