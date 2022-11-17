@@ -88,10 +88,7 @@ p {
     z-index: 1000;
     width: 100%;
     height: 100vh;
-    margin: 0;
-    padding: 0;
     background: #fdfdfd;
-
 
     .circle {
         display: block;
@@ -101,9 +98,9 @@ p {
         height: 40px;
         margin: 0 auto;
         border: 8px solid #e0e0e0;
-        border-top: 7px solid #ffcccc;
-        border-radius: 50px;
-        animation: loading 700ms linear 0ms infinite normal both;
+        border-top: 8px solid #cce6ff;
+        border-radius: 50%;
+        animation: loading 800ms linear 0ms infinite normal both;
     }
 }
 
