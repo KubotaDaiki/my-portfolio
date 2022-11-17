@@ -1,38 +1,81 @@
 body {
   margin: 0;
-  display: flex;
   background-color: #f8f8f8;
+}
+@media screen and (min-width: 768px) {
+  body {
+    display: flex;
+  }
 }
 
 .silebar {
-  background-image: url("../img/background.png");
   background-size: cover;
-  height: 100vh;
-  width: 40vw;
-  position: -webkit-sticky;
-  position: sticky;
+  background-image: url("../img/background.png");
   top: 0px;
   overflow: hidden;
 }
-.silebar:before {
-  content: "";
-  background: inherit;
-  -moz-filter: blur(5px);
-  -o-filter: blur(5px);
-  -ms-filter: blur(5px);
-  filter: blur(5px);
-  position: absolute;
-  top: -5px;
-  left: -5px;
-  right: -5px;
-  bottom: -5px;
-  z-index: -1;
+@media screen and (min-width: 768px) {
+  .silebar {
+    position: -webkit-sticky;
+    position: sticky;
+    height: 100vh;
+    width: 40vw;
+  }
+  .silebar:before {
+    content: "";
+    background: inherit;
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+  }
+}
+@media screen and (max-width: 768px) {
+  .silebar {
+    height: 30vh;
+    width: 100vw;
+    position: relative;
+    z-index: 0;
+  }
+  .silebar:before {
+    content: "";
+    background: inherit;
+    -moz-filter: blur(3px);
+    -o-filter: blur(3px);
+    -ms-filter: blur(3px);
+    filter: blur(3px);
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    z-index: -1;
+  }
 }
 
 .icon {
-  margin-top: 50px;
-  margin-right: 40px;
   text-align: right;
+}
+@media screen and (min-width: 768px) {
+  .icon {
+    margin-top: 50px;
+    margin-right: 40px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .icon {
+    margin-top: 40px;
+    margin-right: 30px;
+  }
+  .icon img {
+    width: 30px;
+  }
 }
 .icon a {
   text-decoration: none;
@@ -44,14 +87,22 @@ body {
   opacity: 0.6;
 }
 
-article {
-  display: flex;
-  align-items: center;
-  height: 100vh;
-  position: relative;
+@media screen and (min-width: 768px) {
+  article {
+    display: flex;
+    height: 100vh;
+    position: relative;
+    align-items: center;
+  }
+  article div {
+    padding-left: 40px;
+  }
 }
-article div {
-  padding-left: 40px;
+@media screen and (max-width: 768px) {
+  article {
+    height: 30vh !important;
+    padding: 20px;
+  }
 }
 
 h1 {
@@ -63,26 +114,51 @@ h1 {
   font-size: 4.5rem;
   font-weight: normal;
 }
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+    margin-top: 7vh;
+  }
+}
 
 h2 {
   font-family: "Noto Sans JP", sans-serif;
   font-weight: normal;
-  padding-bottom: 50px;
-  font-size: 2.5rem;
+}
+@media screen and (max-width: 768px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  h2 {
+    font-size: 2.5rem;
+    padding-bottom: 50px;
+  }
 }
 
 p {
   font-family: "Noto Sans JP", sans-serif;
   font-style: normal;
   font-weight: 300;
-  font-size: 1.5rem;
-  line-height: 3rem;
+}
+@media screen and (max-width: 768px) {
+  p {
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  p {
+    font-size: 1.5rem;
+    line-height: 3rem;
+  }
 }
 
 .loading {
   position: fixed;
   z-index: 1000;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   background: #fdfdfd;
 }
@@ -98,6 +174,12 @@ p {
   border-radius: 50%;
   -webkit-animation: loading 800ms linear 0ms infinite normal both;
           animation: loading 800ms linear 0ms infinite normal both;
+}
+@media screen and (max-width: 768px) {
+  .loading .circle {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 @-webkit-keyframes loading {
@@ -130,6 +212,11 @@ p {
   position: absolute;
   bottom: 50px;
   right: -50px;
+}
+@media screen and (max-width: 768px) {
+  .scroll {
+    visibility: hidden;
+  }
 }
 .scroll::before {
   -webkit-animation: scroll 3.5s infinite;
