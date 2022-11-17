@@ -20,9 +20,12 @@ article {
 
 h1 {
     margin-top: 30vh;
+    font-family: 'Montserrat', sans-serif;
 }
 
 h2 {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: normal;
     padding-bottom: 40px;
     font-size: 2rem;
 }
@@ -31,3 +34,10 @@ article>div {
     padding-left: 20px;
 }
 
+p {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 2rem;
+    line-height: 3rem;
+}
