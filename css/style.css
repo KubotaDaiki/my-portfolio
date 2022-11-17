@@ -1,0 +1,85 @@
+.silebar {
+    background-image: url("../img/background.png");
+    background-size: cover;
+    height: 100vh;
+    width: 40vw;
+    position: sticky;
+    top: 0px;
+    overflow: hidden;
+}
+
+.silebar:before {
+    content: '';
+    background: inherit;
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    background-color: #f8f8f8;
+}
+
+article {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    /* width: 60vw; */
+}
+
+h1 {
+    margin-top: 25vh;
+    margin-right: 30px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: right;
+    color: #E7E7E7;
+    font-size: 4.5rem;
+    font-weight: normal;
+}
+
+h2 {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: normal;
+    padding-bottom: 50px;
+    font-size: 2.5rem;
+}
+
+article>div {
+    padding-left: 40px;
+}
+
+p {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.5rem;
+    line-height: 3rem;
+}
+
+.icon {
+    margin-top: 50px;
+    margin-right: 40px;
+    text-align: right;
+}
+
+.icon>a>img {
+    margin-left: 10px;
+}
+
+.icon>a>img:hover {
+    opacity: 0.6;
+}
+
+a {
+    text-decoration: none;
+}
