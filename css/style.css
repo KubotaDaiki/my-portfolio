@@ -38,9 +38,9 @@ body {
 @media screen and (max-width: 768px) {
   .silebar {
     position: relative;
+    z-index: 0;
     width: 100vw;
     height: 200px;
-    z-index: 0;
   }
   .silebar:before {
     position: absolute;
@@ -91,8 +91,8 @@ body {
 
 @media screen and (min-width: 768px) {
   article {
-    display: flex;
     position: relative;
+    display: flex;
     height: 100vh;
     align-items: center;
   }
@@ -217,11 +217,6 @@ p {
   padding-top: 70px;
   padding-right: 40px;
 }
-@media screen and (max-width: 768px) {
-  .scroll {
-    visibility: hidden;
-  }
-}
 .scroll::before {
   position: absolute;
   top: 0;
@@ -237,6 +232,11 @@ p {
   transform: rotate(-45deg);
   -webkit-animation: scroll 3.5s infinite;
           animation: scroll 3.5s infinite;
+}
+@media screen and (max-width: 768px) {
+  .scroll {
+    visibility: hidden;
+  }
 }
 
 @-webkit-keyframes scroll {
