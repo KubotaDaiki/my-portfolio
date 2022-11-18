@@ -174,13 +174,16 @@ p {
         position: relative;
         top: calc(50% - 20px);
         display: block;
-        width: 40px;
-        height: 40px;
         margin: 0 auto;
         border: 8px solid #e0e0e0;
         border-top: 8px solid #cce6ff;
         border-radius: 50%;
         animation: loading 800ms linear 0ms infinite normal both;
+
+        @include pc {
+            width: 40px;
+            height: 40px;
+        }
 
         @include sp {
             width: 20px;

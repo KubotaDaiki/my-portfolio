@@ -171,14 +171,18 @@ p {
   position: relative;
   top: calc(50% - 20px);
   display: block;
-  width: 40px;
-  height: 40px;
   margin: 0 auto;
   border: 8px solid #e0e0e0;
   border-top: 8px solid #cce6ff;
   border-radius: 50%;
   -webkit-animation: loading 800ms linear 0ms infinite normal both;
           animation: loading 800ms linear 0ms infinite normal both;
+}
+@media screen and (min-width: 768px) {
+  .loading .circle {
+    width: 40px;
+    height: 40px;
+  }
 }
 @media screen and (max-width: 768px) {
   .loading .circle {
