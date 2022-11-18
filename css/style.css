@@ -9,63 +9,75 @@ body {
 }
 
 .silebar {
-  background-size: cover;
-  background-image: url("../img/background.png");
-  top: 0px;
   overflow: hidden;
+  background-image: url("../img/background.png");
+  background-size: cover;
 }
 @media screen and (min-width: 768px) {
   .silebar {
     position: -webkit-sticky;
     position: sticky;
-    height: 100vh;
+    top: 0;
     width: 40vw;
+    height: 100vh;
   }
   .silebar:before {
-    content: "";
-    background: inherit;
-    -moz-filter: blur(5px);
-    -o-filter: blur(5px);
-    -ms-filter: blur(5px);
-    filter: blur(5px);
     position: absolute;
+    z-index: -1;
     top: -5px;
-    left: -5px;
     right: -5px;
     bottom: -5px;
-    z-index: -1;
+    left: -5px;
+    background: inherit;
+    content: "";
+    -moz-filter: blur(5px);
+    -ms-filter: blur(5px);
+    -o-filter: blur(5px);
+    filter: blur(5px);
   }
 }
 @media screen and (max-width: 768px) {
   .silebar {
-    height: 200px;
-    width: 100vw;
     position: relative;
     z-index: 0;
+    width: 100vw;
+    height: 200px;
   }
   .silebar:before {
-    content: "";
-    background: inherit;
-    -moz-filter: blur(3px);
-    -o-filter: blur(3px);
-    -ms-filter: blur(3px);
-    filter: blur(3px);
     position: absolute;
+    z-index: -1;
     top: -3px;
-    left: -3px;
     right: -3px;
     bottom: -3px;
-    z-index: -1;
+    left: -3px;
+    background: inherit;
+    content: "";
+    -moz-filter: blur(3px);
+    -ms-filter: blur(3px);
+    -o-filter: blur(3px);
+    filter: blur(3px);
   }
 }
 
 .icon {
   text-align: right;
 }
+.icon a {
+  text-decoration: none;
+}
+.icon a img {
+  margin-left: 10px;
+}
+.icon a img:hover {
+  opacity: 0.6;
+}
 @media screen and (min-width: 768px) {
   .icon {
     margin-top: 50px;
     margin-right: 40px;
+  }
+  .icon img {
+    width: 40px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -77,21 +89,12 @@ body {
     width: 30px;
   }
 }
-.icon a {
-  text-decoration: none;
-}
-.icon a img {
-  margin-left: 10px;
-}
-.icon a img:hover {
-  opacity: 0.6;
-}
 
 @media screen and (min-width: 768px) {
   article {
+    position: relative;
     display: flex;
     height: 100vh;
-    position: relative;
     align-items: center;
   }
   article div {
@@ -106,18 +109,22 @@ body {
 }
 
 h1 {
-  margin-top: 25vh;
   margin-right: 30px;
   font-family: "Montserrat", sans-serif;
-  text-align: right;
-  color: #E7E7E7;
-  font-size: 4.5rem;
   font-weight: normal;
+  color: #f8f8f8;
+  text-align: right;
+}
+@media screen and (min-width: 768px) {
+  h1 {
+    margin-top: 25vh;
+    font-size: 4.5rem;
+  }
 }
 @media screen and (max-width: 768px) {
   h1 {
-    font-size: 2rem;
     margin-top: 35px;
+    font-size: 2rem;
   }
 }
 
@@ -125,33 +132,31 @@ h2 {
   font-family: "Noto Sans JP", sans-serif;
   font-weight: normal;
 }
+@media screen and (min-width: 768px) {
+  h2 {
+    padding-bottom: 50px;
+    font-size: 2.5rem;
+  }
+}
 @media screen and (max-width: 768px) {
   h2 {
     font-size: 1.5rem;
-  }
-}
-@media screen and (min-width: 768px) {
-  h2 {
-    font-size: 2.5rem;
-    padding-bottom: 50px;
   }
 }
 
 p {
   font-family: "Noto Sans JP", sans-serif;
-  font-style: normal;
-  font-weight: 300;
-}
-@media screen and (max-width: 768px) {
-  p {
-    font-size: 0.8rem;
-    line-height: 1.5rem;
-  }
 }
 @media screen and (min-width: 768px) {
   p {
     font-size: 1.5rem;
     line-height: 3rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  p {
+    font-size: 0.8rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -160,20 +165,24 @@ p {
   z-index: 1000;
   width: 100vw;
   height: 100vh;
-  background: #fdfdfd;
+  background: #f8f8f8;
 }
 .loading .circle {
-  display: block;
   position: relative;
   top: calc(50% - 20px);
-  width: 40px;
-  height: 40px;
+  display: block;
   margin: 0 auto;
   border: 8px solid #e0e0e0;
   border-top: 8px solid #cce6ff;
   border-radius: 50%;
   -webkit-animation: loading 800ms linear 0ms infinite normal both;
           animation: loading 800ms linear 0ms infinite normal both;
+}
+@media screen and (min-width: 768px) {
+  .loading .circle {
+    width: 40px;
+    height: 40px;
+  }
 }
 @media screen and (max-width: 768px) {
   .loading .circle {
@@ -200,39 +209,39 @@ p {
   }
 }
 .loading.hide {
-  opacity: 0;
   pointer-events: none;
+  opacity: 0;
   transition: opacity 500ms;
 }
 
 .scroll {
+  position: absolute;
+  right: -50px;
+  bottom: 50px;
   display: inline-block;
   padding-top: 70px;
   padding-right: 40px;
+}
+.scroll::before {
   position: absolute;
-  bottom: 50px;
-  right: -50px;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: auto;
+  border: solid #000000;
+  border-width: 0 0 1px 1px;
+  content: "";
+  transform: rotate(-45deg);
+  -webkit-animation: scroll 3.5s infinite;
+          animation: scroll 3.5s infinite;
 }
 @media screen and (max-width: 768px) {
   .scroll {
     visibility: hidden;
   }
-}
-.scroll::before {
-  -webkit-animation: scroll 3.5s infinite;
-          animation: scroll 3.5s infinite;
-  border: solid #000;
-  border-width: 0 0 1px 1px;
-  content: "";
-  display: inline-block;
-  margin: auto;
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  transform: rotate(-45deg);
-  width: 20px;
-  height: 20px;
 }
 
 @-webkit-keyframes scroll {
