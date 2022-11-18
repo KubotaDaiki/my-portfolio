@@ -49,6 +49,7 @@ body {
 
     @include pc {
         position: sticky;
+        top: 0;
         width: 40vw;
         height: 100vh;
         @include blur(5px);
