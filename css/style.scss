@@ -125,7 +125,7 @@ h1 {
 
     @include pc {
         margin-top: 25vh;
-        font-size: 4.5rem;
+        font-size: 3.5rem;
     }
 
     @include sp {
@@ -140,7 +140,7 @@ h2 {
 
     @include pc {
         padding-bottom: 50px;
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     @include sp {
@@ -152,7 +152,7 @@ p {
     font-family: $japanese_font;
 
     @include pc {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         line-height: 3rem;
     }
 
